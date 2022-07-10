@@ -11,7 +11,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           codiga_api_token: ${{ secrets.CODIGA_API_TOKEN }}
-          force_ref: 'none'
+          force_ref: ${{ github.event.inputs.BRANCH }}
           min_quality_grade: 'WARNING'
           min_quality_score: '50'
           max_defects_rate: '0.0001'
